@@ -352,27 +352,16 @@ nav ul {
     font-weight: 600;
     color: #0f172a;
     cursor: pointer;
-    list-style: none; /* Removes standard default arrow in most browsers */
+    list-style: none;
+    /* Removes standard default arrow in most browsers */
     display: flex;
     justify-content: space-between;
     align-items: center;
     user-select: none;
 }
 
-/* Remove default marker for WebKit/Chrome */
-.faq-item summary::-webkit-details-marker {
-    display: none;
-}
 
-/* Custom animated plus/minus indicator */
-.faq-item summary::after {
-    content: "+";
-    font-size: 24px;
-    font-weight: 400;
-    color: #2563eb;
-    transition: transform 0.2s ease;
-    margin-left: 16px;
-}
+
 
 .faq-item[open] summary::after {
     content: "−";
@@ -423,12 +412,4 @@ footer {
 .footer-links a:hover {
     color: #ffffff;
     text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
 }
