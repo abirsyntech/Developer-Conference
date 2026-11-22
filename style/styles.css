@@ -301,12 +301,7 @@ nav ul {
     background: #e2e8f0;
 }
 
-/* Responsive for tablets & mobile */
-@media (max-width: 900px) {
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 /* --------------------------FAQ Section-------------------------- */
 #faq {
@@ -398,4 +393,42 @@ nav ul {
 
 .faq-content strong {
     color: #2563eb;
+}
+
+/* --------------------------Footer------------------------------ */
+footer {
+    background-color: #0b1320;
+    padding: 28px 0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
 }
