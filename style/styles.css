@@ -24,8 +24,12 @@ a:hover {
     margin: 0 auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .btn-primary {
-    font-size: 16;
+    font-size: 16px;
     font-weight: bold;
     background-color: #1d4ed8;
     padding: 12px 40px;
@@ -33,6 +37,7 @@ a:hover {
     border-radius: 10px;
     border: 0;
     outline: 0;
+    cursor: pointer;
 }
 
 /* -------------------------Nav--------------------------- */
@@ -301,4 +306,96 @@ nav ul {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* --------------------------FAQ Section-------------------------- */
+#faq {
+    margin: 90px 0;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.faq-header h2 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.faq-header p {
+    font-size: 16px;
+    color: #64748b;
+}
+
+.faq-accordion {
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.faq-item[open] {
+    border-color: #93c5fd;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.faq-item summary {
+    padding: 20px 24px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #0f172a;
+    cursor: pointer;
+    list-style: none; /* Removes standard default arrow in most browsers */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+/* Remove default marker for WebKit/Chrome */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom animated plus/minus indicator */
+.faq-item summary::after {
+    content: "+";
+    font-size: 24px;
+    font-weight: 400;
+    color: #2563eb;
+    transition: transform 0.2s ease;
+    margin-left: 16px;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+    color: #1d4ed8;
+}
+
+.faq-content {
+    padding: 0 24px 20px 24px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.faq-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #475569;
+    padding-top: 14px;
+}
+
+.faq-content strong {
+    color: #2563eb;
 }
